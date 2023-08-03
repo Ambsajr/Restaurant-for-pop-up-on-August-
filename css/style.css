@@ -1,0 +1,501 @@
+
+
+:root{
+    --peru:#cd9452;
+    --black:#222;
+    --white:#fff;
+    --light-balck:#666;
+    --light-white:#f5f5f5;
+    --dark-bg:rgb(0, 0, .7);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(.43,1.1,.62,1.08);
+    text-transform: capitalize;
+}
+* > img{
+    user-select: none;
+    pointer-events: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+    
+}
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+    
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--peru);
+    
+}
+.knife{
+    width: 70px;
+    height: 70px;
+    position:absolute;
+    rotate: 2deg;
+}
+.knife-1{
+    width: 70px;
+    height: 70px;
+    position:absolute;
+    rotate: 3deg;
+    right: 1291px;
+}
+h4{
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+section{
+    padding: 5rem 10%;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.heading span{
+    font-size: 2.5rem;
+    color: var(--peru)
+}
+.heading h3{
+    font-size: 4.5rem;
+    color: var(--balck)
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: var(--peru);
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+}
+.btn:hover{
+    letter-spacing: .2rem;
+}
+.header{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000;
+    background : var(--white);
+}
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:var(--black);
+    /* background-image: url(/images/Screenshot\ 2023-08-02\ at\ 2.53.40\ pm.png); */
+    background-repeat: no-repeat;
+    
+    
+}
+
+
+.header .logo i{
+    color: var(--peru);
+    padding-right: .7rem;
+    
+}
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    
+}
+.header .navbar a:hover{
+    color: var(--peru);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+/* <!-- HOME SECTION star --> */
+@keyframes fadeIn{
+    0%{
+        transform: translateY(-4rem) scale(0);
+        opacity: 0;
+    }
+}
+.home{
+    padding: 0; 
+    background: var(--balck);
+}
+
+.home .slide{
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative; 
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home .slide::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:var(--dark-bg);
+    z-index:-1;
+    opacity: 0.4;
+}
+.home .slide .content{
+    text-align: center;
+    width: 70rem;
+    display: none;
+}
+.home .slide .content span{
+    font-size: 3rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    color: var(--light-white);
+    animation:fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34).2s backwards;
+}
+.home .slide .content h3{
+    font-size: 8vw;
+    text-transform: uppercase;
+    color: var(--light-white);
+    text-shadow: 0.5rem 1rem rgba(0,0,0,.7) ;
+    line-height: 1;
+    padding: 2rem 0;
+    animation:fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34).4s backwards;
+}
+.home .slide .content .btn{
+    animation:fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34).6s backwards;
+}
+.home .swiper-slide-active .content{
+    display: inline-block;
+}
+.swiper-button-next, 
+.swiper-button-prev{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--white);
+    color:var(--black);
+}
+.swiper-button-next:hover, 
+.swiper-button-prev:hover{
+    background:var(--peru);
+    color: var(--white);
+}
+.swiper-button-next::after, 
+.swiper-button-prev::after{
+    font-size: 2rem;
+}
+
+
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.about .image{
+    flex:1 1 41rem;
+    
+}
+.about .image img{
+    width: 100%;
+    
+}
+.about .content{
+    flex:1 1 41rem;
+}
+.about .content .title{
+    font-size: 3rem;
+    color: var(--balck);
+}
+.about .content p{
+    font-size: 1.7rem;
+    color: var(--light-balck);
+    padding: 1rem 0;
+    line-height: 2;
+}
+.about .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.about .content .icons-container .icons{
+    flex: 1 1 16rem;
+    text-align: center;
+    background:var(--light-white);
+    border-radius: 10px;
+}
+.about .content .icons-container .icons img{
+    height: 5rem;
+    
+}
+.about .content .icons-container .icons h3 {
+    padding-top: 1rem;
+    font-size: 2rem;
+    color: var(--light-balck);
+    font-weight: normal;
+    
+}
+/* food styling */
+
+
+.food{
+    background:var(--white)
+}
+.food .slide{
+    text-align: center;
+    padding: 3rem 2rem;
+    transform: scale(.9);
+    opacity: .4;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+.swiper-pagination-bullet-active{
+    background: var(--peru);
+}
+.swiper-horizontal> .swiper-pagination-bullets, .swiper-pagination-bullet
+.swiper-paginatio-horizontal{
+    bottom: 0;
+}
+.food .swiper-slide-active{
+    transform: scale(1);
+    opacity: 1;
+    background: #ffffff;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+}
+.food .slide img{
+    height: 25rem;
+    margin-bottom: 1rem;
+}
+.food .slide h3{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color:var(--black) ;
+}
+.food .slide .price{
+    font-size: 2.5rem;
+    color: var(--peru);
+}
+/* booking form  */
+div.elem-group {
+    margin: 20px  ;
+    
+}
+form{
+    background-color:rgb(15, 222, 233);
+    border: 10px solid rgb(15, 222, 233);;
+    bottom: 30px;
+
+   
+}
+.elem-group h1{
+    text-align: center;
+    font-weight: normal;
+    padding-top: 10px;
+    font-size: 2rem;
+}
+
+div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    
+    margin-left: 1%;
+}
+
+label {
+    display: inline-block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 15px;
+    font-size: 2.25em;
+    align-items: center;
+    
+}
+
+input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    width: 100%;
+    padding: 10px;
+}
+
+div.elem-group.inlined input {
+    width: 55%;
+    display: inline-block;
+}
+
+textarea {
+    height: 100px;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+hr {
+    border: 2px solid #ccc;
+    
+}
+
+button {
+    height: 60px;
+    width: 180px;
+    background: rgb(68, 180, 28);
+    border: none;
+    color: white;
+    font-size: 2.25em;
+    font-family: 'Nanum Gothic';
+    border-radius: 10px;
+    cursor: pointer;
+    left:40%;
+   
+    
+    
+}
+
+button:hover {
+    background: 2px  black;
+}
+/* #booking{
+ width: 800px;
+ height: 900px;
+ align-items: center;
+ justify-content: center;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1200px){
+    section{
+        padding: 3rem 5%;
+    }
+}
+
+/* ___________ */
+@media(max-width:991px){
+    section{
+        padding: 3rem 5%;
+    }
+    html{
+        font-size: 55%;
+    }
+    .home .slide .content h3{
+        font-size: 15vw;
+    }
+}
+/* ----------------- */
+
+
+/* _+_____________ */
+
+@media(max-width:768px){
+    #menu-btn{
+        display:inline-block ;
+        
+    }
+    .fa-times{
+        transform: rotate(180deg);
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        border-top:var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 00);
+    }
+    
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+    .swiper-button-next, 
+    .swiper-button-prev{
+        top: initial;
+        bottom: 1rem;
+    }
+}
+/* _______________ */
+@media(max-width:450px){
+    section{
+        padding: 3rem 5%;
+    }
+    html{
+        font-size: 50%;
+        
+    }
+    .home .slide .content h3{
+        font-size: 7rem;
+    }
+}
+
+
